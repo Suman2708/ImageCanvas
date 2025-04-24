@@ -1,115 +1,64 @@
-<<<<<<< HEAD
-# canvaImage
+🖼️ Stencil Image Editor
+This is a React-based image editor built with Fabric.js. It allows users to upload images, view them within a fixed stencil (cut-out area), and interactively zoom, reset, and drag the image.
 
-This project is a simple image editor built with React and Fabric.js. It allows users to upload an image into a canvas area with a fixed frame (called a stencil). The image is scaled to match the canvas width, and users can zoom in, zoom out, or reset the image.
+🚀 Features
+📤 Upload an image (JPEG, PNG, etc.)
 
-Features
-Responsive Canvas: The canvas resizes automatically based on your screen size.
+🖼️ Image fits into a fixed stencil frame
 
-Single Image Display: Only one image is shown at a time. Uploading a new image removes the previous one.
+🔍 Zoom in and zoom out on the uploaded image
 
-Fit Image to Canvas Width: When an image is uploaded, it is scaled so that its width exactly fits the canvas.
+🎯 Drag the image inside the stencil to adjust view
 
-Zoom In/Out: Users can zoom into or out of the image using buttons.
+♻️ Reset the image to its initial size and position
 
-Reset Button: Resets the image to its original scale and position.
+📱 Responsive canvas that adjusts with the browser window
 
-Redux Integration: Image scale and position are stored in Redux for state management.
+🧩 Key Parts of the Implementation
+Canvas Initialization
+A Fabric canvas is created and initialized inside a useEffect.
 
-How it Works
-Canvas Setup: A Fabric.js canvas is created and resized to fit the screen.
+The canvas resizes dynamically based on the screen size (80vw x 60vh).
 
-Stencil Frame: A rectangle is added to the canvas as a frame. The image is clipped inside this frame.
+Stencil Area
+A non-selectable fabric.Rect is added as a clip path to simulate a stencil window.
 
-Image Upload:
+Only the content inside this stencil area is visible.
 
-The image is scaled to match the canvas width.
+Image Upload
+User uploads an image using a file input.
 
-It's centered inside the stencil.
+The uploaded image is automatically scaled and positioned to fit nicely inside the stencil.
 
-If another image was already present, it is removed.
+If another image is uploaded, the previous one is removed.
 
-Zoom & Reset:
+Zoom Functionality
+Users can zoom in or out using buttons.
 
-Zoom buttons increase or decrease the image size.
+Zooming adjusts the scale of the image while constraining it within the stencil.
 
-The reset button returns the image to its initial scale and position.
+Dragging
+After upload, the image is draggable in all directions within the canvas.
 
-How to Use
-Upload an image using the file input.
+Locking is removed to allow manual adjustments.
 
-Use the Zoom In, Zoom Out, or Reset buttons to interact with the image.
+Reset
+Resets the image back to the initial scaled size and position (like after upload).
 
-Upload a new image to replace the old one.
-=======
-# Getting Started with Create React App
+🛠️ Tech Stack
+React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Redux (for state management)
 
-## Available Scripts
+Tailwind CSS (for UI styling)
 
-In the project directory, you can run:
+Fabric.js (for canvas operations)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 881ad7d (Initialize project using Create React App)
+📂 How to Run Locally
+bash
+Copy
+Edit
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
+npm start
