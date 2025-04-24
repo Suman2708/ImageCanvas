@@ -1,24 +1,26 @@
-🖼️ Stencil Image Editor
+ Stencil Image Editor
 This is a React-based image editor built with Fabric.js. It allows users to upload images, view them within a fixed stencil (cut-out area), and interactively zoom, reset, and drag the image.
 
-🚀 Features
-📤 Upload an image (JPEG, PNG, etc.)
+ Features:-
+  Upload an image (JPEG, PNG, etc.)
 
-🖼️ Image fits into a fixed stencil frame
+  Image fits into a fixed stencil frame
 
-🔍 Zoom in and zoom out on the uploaded image
+  Zoom in and zoom out on the uploaded image
 
-🎯 Drag the image inside the stencil to adjust view
+  Drag the image inside the stencil to adjust view
 
-♻️ Reset the image to its initial size and position
+  Reset the image to its initial size and position
 
-📱 Responsive canvas that adjusts with the browser window
+  Responsive canvas that adjusts with the browser window
 
-🧩 Key Parts of the Implementation
-Canvas Initialization
-A Fabric canvas is created and initialized inside a useEffect.
 
-The canvas resizes dynamically based on the screen size (80vw x 60vh).
+  Key Parts of the Implementation:-
+  
+  Canvas Initialization
+   A Fabric canvas is created and initialized inside a useEffect.
+
+   The canvas resizes dynamically based on the screen size (80vw x 60vh).
 
 Stencil Area
 A non-selectable fabric.Rect is added as a clip path to simulate a stencil window.
@@ -45,7 +47,7 @@ Locking is removed to allow manual adjustments.
 Reset
 Resets the image back to the initial scaled size and position (like after upload).
 
-🛠️ Tech Stack
+  Tech Stack
 React
 
 Redux (for state management)
@@ -55,10 +57,8 @@ Tailwind CSS (for UI styling)
 Fabric.js (for canvas operations)
 
 📂 How to Run Locally
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+
+git clone https://github.com/Suman2708/ImageCanvas.git
+cd ImageCanvas
 npm install
 npm start
